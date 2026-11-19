@@ -1,0 +1,12 @@
+struct.pack	feff00000102
+struct.unpack	-2	3
+struct.size	6
+struct.string	abc	4
+struct.getnum_overflow	false	integral size overflow
+sjson.decode	xA
+sjson.encode	[1,2,"x"]
+sjson.error	false
+bit.band	15	5	256
+load	42
+string	NODEMCU-NODEMCU	100
+table	3,1,2

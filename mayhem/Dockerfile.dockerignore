@@ -1,0 +1,6 @@
+# Per-Dockerfile ignore for `docker build -f mayhem/Dockerfile .` (takes precedence over any root
+# .dockerignore). Keep the full repo incl. .git; drop only local build outputs.
+mayhem/out/
+**/.output/
+luac.cross
+luac.cross.int

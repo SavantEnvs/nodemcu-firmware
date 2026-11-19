@@ -1,0 +1,11 @@
+project: savantenvs/nodemcu-firmware
+target: uz_unzip_afl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uz_unzip_afl/testsuite
+cmds:
+  # uzlib_inflate driven through upstream's host gunzip callbacks (app/uzlib/host/uz_unzip.c);
+  # libFuzzer harness mayhem/harnesses/fuzz_uz_unzip.c (the target keeps its original name)
+  - cmd: /mayhem/uz_unzip_afl
+    libfuzzer: true
+    timeout: 5
